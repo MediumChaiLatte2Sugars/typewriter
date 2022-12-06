@@ -1,7 +1,13 @@
 const sentence = "hello there from lighthouse labs";
+let timer = 1000;
 
 for (const char of sentence) {
-  process.stdout.write(char);
+  setTimeout(() => {
+    process.stdout.write(char);
+  }, timer)
+  
 }
 
-process.stdout.write("\n");
+setTimeout(() => {
+  process.stdout.write("\n");
+}, timer);
